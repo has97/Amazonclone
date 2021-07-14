@@ -1,0 +1,109 @@
+html{
+ font-size: 62.5%;
+ box-sizing: border-box; 
+ /* so that the padding and border is included in the image width */
+}
+body{
+    font: 1.6rem Helvetica;
+    height: 100vh;
+    margin:0;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main1 main2"
+    "main1 footer";
+    /* This specifies the area within the grid layout */
+    grid-template-columns: 300px 1fr;
+    /* grid temlate structure : rows and columns */
+    grid-template-rows: 5rem 1fr 5rem;
+    height:100%;
+    /* border-spacing: 5px; */
+}
+.checked
+{
+    color:orange;
+}
+x-star-rating
+{
+    display: inline-flex;
+}
+x-star-rating > .fstar
+{
+    content: '\f3ae';
+    color: honeydew;
+}
+x-star-rating > .star
+{
+    content: '\f2fc';
+    color: khaki;
+}
+.products
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.products li
+{
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 3);
+    text-align:center;
+    font-family:arial;
+    max-width:300px;
+    padding:2px;
+    margin: 1px 1px 1px 1px;
+    list-style-type: none;
+}
+.product-name
+{
+    font-size:30px;
+    font-weight: bold;
+}
+.product-price
+{
+    font-size:22px;
+    color: gray;
+}
+.product-brand
+{
+    font-size: 22px;
+}
+.header{
+    grid-area: header;
+    background-color: rgb(12, 12, 12);
+    color: rgb(248, 247, 253);
+    display: flex;
+    /* refrencing the grid names here !!! */
+    /* The justify content for space between */
+    justify-content: space-between;
+    padding: 1rem;
+}
+.home
+{
+    font-size:3.5rem;
+    font-weight: bold;
+}
+.main1{
+    grid-area : main1;
+    /* background-color: rgb(245, 23, 23); */
+    /* padding: 2rem; */
+    margin: 5px 5px 5px 5px;
+    border: solid #000;
+    border-width: 1px 1px 1px 1px;
+}
+.main2{
+    grid-area : main2;
+    /* background-color: rgb(23, 245, 42); */
+}
+.footer{
+    grid-area: footer;
+    color: rgb(12, 11, 12);
+    background-color: rgb(12, 12, 12);
+    display: flex;
+    color: rgb(248, 247, 253);
+    justify-content: center;
+    /* background-color: rgb(107, 112, 112); */
+    align-items: center;
+}
